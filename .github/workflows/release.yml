@@ -19,7 +19,7 @@ jobs:
     strategy:
       matrix:
         package_target:
-          - amazonlinux2023
+          - amazonlinux2023_lambda
       fail-fast: false
     steps:
       - name: configure docker
