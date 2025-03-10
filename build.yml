@@ -361,7 +361,7 @@ docker-targets:
     args:
       from: amazonlinux:2023
     output: rpm
-    matrix: ['x86_64']
+    matrix: ['arm64']
     depend: >
       ca-certificates
       fontconfig
@@ -392,7 +392,7 @@ docker-targets:
       from: amazonlinux:2023
     output: lambda_zip
     after_compile: amazonlinux2_lambda
-    arch: x86_64
+    arch: arm64
 
   opensuse.leap15:
     source: docker/Dockerfile.opensuse
