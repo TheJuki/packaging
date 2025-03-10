@@ -4,7 +4,7 @@
 rm -rf /tgt/wkhtmltox/{include,share,lib}
 
 # We need to copy dependencies which are not presented in amazonlinux2 image
-libs="libjpeg libpng15 libXrender libfontconfig libfreetype libXext libX11 libxcb libXau libexpat libuuid libbz2"
+libs="libjpeg libpng16 libXrender libfontconfig libfreetype libXext libX11 libxcb libXau libexpat libuuid libbz2"
 mkdir -p /tgt/wkhtmltox/lib
 for lib in $(echo $libs); do
     echo ".*${lib}\.so\.[0-9]{1,2}" | xargs find /usr/lib64 -regextype posix-awk -regex | xargs cp -t /tgt/wkhtmltox/lib/
